@@ -1,15 +1,18 @@
-# Byte-compiled / compiled python files
+# Arquivos gerados por Python
 __pycache__/
-*.py[cod]
-*.so
-*.dylib
+*.pyc
 
-# Python caches
-.pytest_cache/
-.mypy_cache/
+# Arquivos gerados por Jupyter Notebooks
+.ipynb_checkpoints/
 
-# Virtual Environment
-*.venv/
+# Ambiente virtual Python (venv)
+venv/
 
-# Jupyter Notebooks
-*.notebook.ipynb
+# Dados e bancos de dados
+data/registro_autoconhecimento/*.db
+
+# Arquivos de configuração local
+config.ini
+
+# Arquivos gerados durante a execução do projeto
+relatorios/
