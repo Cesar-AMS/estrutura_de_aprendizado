@@ -9,7 +9,7 @@ __pycache__/
 .mypy_cache/
 
 # Virtual Environment
-venv/
+*.venv/
 
 # Jupyter Notebooks
-notebook.ipynb
+*.notebook.ipynb
