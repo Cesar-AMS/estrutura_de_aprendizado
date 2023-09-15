@@ -24,16 +24,3 @@ class Tratamento:
         return mini
 
 
-# Solicita ao usuário um texto de entrada
-texto = input('Digite um texto: ')
-
-# Chama a função de tratamento com o texto inserido pelo usuário
-usuario = Tratamento(texto)
-#x = usuario.criar_dataframe()
-#y = usuario.tokeniza_por_letras()
-#z = usuario.tokeniza_por_sentenca()
-letras_mini = usuario.minuscula()
-
-
-# Exibe o DataFrame resultante
-print(letras_mini)
