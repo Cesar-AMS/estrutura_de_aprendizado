@@ -32,3 +32,4 @@ __pycache__/
 
 # Arquivos jupyter
 .ipynb_checkpoints/
+.notebook.ipynb/
