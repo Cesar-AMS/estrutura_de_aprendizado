@@ -1,35 +1,15 @@
-# Arquivos de byte compilados Python
+# Byte-compiled / compiled python files
 __pycache__/
+*.py[cod]
+*.so
+*.dylib
 
-# Arquivos de log
-*.log
+# Python caches
+.pytest_cache/
+.mypy_cache/
 
 # Virtual Environment
-.venv/
+venv/
 
-
-# Arquivos de saída de IDEs
-.idea/
-.vscode/
-*.pyc
-
-# Arquivos temporários
-*.bak
-*.swp
-*~
-
-# Arquivos de configuração pessoal
-*.secret
-*.confidential
-
-# Arquivos gerados na construção do projeto
-/build/
-/dist/
-/*.egg-info/
-*.egg
-*.egg-info
-
-
-# Arquivos jupyter
-ipynb_checkpoints/
-notebook.ipynb/
+# Jupyter Notebooks
+notebook.ipynb
