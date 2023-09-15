@@ -1,0 +1,30 @@
+# Arquivos de byte compilados Python
+__pycache__/
+
+# Arquivos de log
+*.log
+
+# Virtual Environment
+venv/
+env/
+
+# Arquivos de saída de IDEs
+.idea/
+.vscode/
+*.pyc
+
+# Arquivos temporários
+*.bak
+*.swp
+*~
+
+# Arquivos de configuração pessoal
+*.secret
+*.confidential
+
+# Arquivos gerados na construção do projeto
+/build/
+/dist/
+/*.egg-info/
+*.egg
+*.egg-info
