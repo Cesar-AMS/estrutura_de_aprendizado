@@ -1,5 +1,9 @@
 import pandas as pd
 import nltk
+from nltk.corpus import stopwords
+
+nltk.download('punkt')
+nltk.download('stopwords')
 
 class Tratamento:
 
@@ -23,4 +27,8 @@ class Tratamento:
         mini = str.lower(self.dados)
         return mini
 
+    def remover_palavras_comum(self):
+        remove = stopwords.words('portuguese')
+        texto_sem_stopwords = [word for word in nltk.word_tokenize(self.dados) if word.lower() not in remove]
+        return texto_sem_stopwords
 
