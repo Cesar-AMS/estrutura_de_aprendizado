@@ -29,6 +29,6 @@ class Tratamento:
 
     def remover_palavras_comum(self):
         remove = stopwords.words('portuguese')
-        texto_sem_stopwords = [word for word in nltk.word_tokenize(self.dados) if word.lower() not in remove]
+        texto_sem_stopwords = [palavra for palavra in nltk.word_tokenize(self.dados) if palavra.lower() not in remove]
         return texto_sem_stopwords
 
