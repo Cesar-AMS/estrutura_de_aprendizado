@@ -1,4 +1,4 @@
-from funcional import pre_pro_texto
+from tratacao import pre_pro_texto
 from modelos import AnalisadorSentimento
 
 def main():
