@@ -8,11 +8,11 @@ def preprocess_text(text):
 
     # Remove palavras comuns
     letras_brasileira = stopwords.words('portuguese')
-    letras_removidas = [palavra for palavra in tokenizada if palavra.lower() not in letras_brasileira]
+    letras_base = [palavra for palavra in tokenizada if palavra.lower() not in letras_brasileira]
 
     # Stemming
     stemmer = RSLPStemmer()
-    stemizador = [stemmer.stem(palavra) for palavra in letras_removidas]
+    stemizador = [stemmer.stem(palavra) for palavra in letras_base]
 
     # Combine todas as transformações em um único texto tratado
     texto_tratado = ' '.join(stemizador)
