@@ -3,7 +3,7 @@ from nltk.corpus import stopwords
 from nltk.stem import RSLPStemmer
 from nltk.stem import WordNetLemmatizer
 
-def preprocess_text(text):
+def preproces_de_texto(text):
     # Transforma cada letra em um token
     tokenizada = nltk.word_tokenize(text)
 
@@ -29,7 +29,7 @@ def main():
     texto = input('Digite um texto: ')
 
     # Pré-processa o texto
-    texto_tratado = preprocess_text(texto)
+    texto_tratado = preproces_de_texto(texto)
 
     # Imprimir o resultado final
     print(f"Texto tratado: {texto_tratado}")
