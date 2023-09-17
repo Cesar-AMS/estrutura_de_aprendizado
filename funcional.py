@@ -2,8 +2,9 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import RSLPStemmer
 from nltk.stem import WordNetLemmatizer
+from modelos import AnalisadorSentimento
 
-def preproces_de_texto(text):
+def preprocess_text(text):
     # Transforma cada letra em um token
     tokenizada = nltk.word_tokenize(text)
 
@@ -13,11 +14,11 @@ def preproces_de_texto(text):
 
     # Stemming
     stemmer = RSLPStemmer()
-    stemizado = [stemmer.stem(palavra) for palavra in palavras_relevantes]
+    stemizador = [stemmer.stem(palavra) for palavra in palavras_relevantes]
 
     # Lemmatização
     lemma = WordNetLemmatizer()
-    lemmatizado = [lemma.lemmatize(palavra) for palavra in stemizado]
+    lemmatizado = [lemma.lemmatize(palavra) for palavra in stemizador]
 
     # Combine todas as transformações em um único texto tratado
     texto_tratado = ' '.join(lemmatizado)
@@ -29,10 +30,13 @@ def main():
     texto = input('Digite um texto: ')
 
     # Pré-processa o texto
-    texto_tratado = preproces_de_texto(texto)
+    texto_tratado = preprocess_text(texto)
 
-    # Imprimir o resultado final
-    print(f"Texto tratado: {texto_tratado}")
+    # Realiza a análise de sentimento
+    analise_sentimental = AnalisadorSentimento(texto_tratado)
+    resultado = analise_sentimental.analisar_sentimento()
+    # Imprime o resultado da análise de sentimento
+    print(f"Resultado da análise de sentimento: {resultado}")
 
 if __name__ == "__main__":
     main()
