@@ -1,9 +1,12 @@
 import pandas as pd
 import nltk
 from nltk.corpus import stopwords
+from nltk.stem import RSLPStemmer
+
 
 nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download("rslp")
 
 class Tratamento:
 
@@ -32,3 +35,7 @@ class Tratamento:
         texto_sem_stopwords = [palavra for palavra in nltk.word_tokenize(self.dados) if palavra.lower() not in remove]
         return texto_sem_stopwords
 
+    def stemizar(self):
+        stemmer = RSLPStemmer()
+        stemizado = [stemmer.stem(palavra) for palavra in nltk.word_tokenize(self.dados, language='portuguese')]
+        return stemizado
