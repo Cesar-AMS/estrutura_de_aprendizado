@@ -13,11 +13,11 @@ def preprocess_text(text):
 
     # Stemming
     stemmer = RSLPStemmer()
-    stemizador = [stemmer.stem(palavra) for palavra in palavras_relevantes]
+    stemizado = [stemmer.stem(palavra) for palavra in palavras_relevantes]
 
     # Lemmatização
     lemma = WordNetLemmatizer()
-    lemmatizado = [lemma.lemmatize(palavra) for palavra in stemizador]
+    lemmatizado = [lemma.lemmatize(palavra) for palavra in stemizado]
 
     # Combine todas as transformações em um único texto tratado
     texto_tratado = ' '.join(lemmatizado)
