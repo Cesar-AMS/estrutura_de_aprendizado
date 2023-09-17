@@ -4,15 +4,15 @@ from nltk.stem import RSLPStemmer
 
 def preprocess_text(text):
     # Transforma cada letra em um token
-    tokenizacao = nltk.word_tokenize(text)
+    tokenizada = nltk.word_tokenize(text)
 
     # Remove palavras comuns
-    lista_brasileiro = stopwords.words('portuguese')
-    remove_letras = [palavra for palavra in tokenizacao if palavra.lower() not in lista_brasileiro]
+    letras_brasileira = stopwords.words('portuguese')
+    letras_removidas = [palavra for palavra in tokenizada if palavra.lower() not in letras_brasileira]
 
     # Stemming
     stemmer = RSLPStemmer()
-    stemizador = [stemmer.stem(palavra) for palavra in remove_letras]
+    stemizador = [stemmer.stem(palavra) for palavra in letras_removidas]
 
     # Combine todas as transformações em um único texto tratado
     texto_tratado = ' '.join(stemizador)
