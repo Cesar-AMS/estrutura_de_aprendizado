@@ -14,7 +14,6 @@ class Tratamento:
         self.dados = dados
 
     def criar_dataframe(self):
-        # Criando um DataFrame com um índice explícito
         dt = pd.DataFrame({'coluna_de_dados': [self.dados]}, index=[0])
         return dt
 
