@@ -1,6 +1,7 @@
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import RSLPStemmer
+from nltk.stem import WordNetLemmatizer
 
 def preprocess_text(text):
     # Transforma cada letra em um token
@@ -14,8 +15,12 @@ def preprocess_text(text):
     stemmer = RSLPStemmer()
     stemizador = [stemmer.stem(palavra) for palavra in palavras_relevantes]
 
+    # Lemmatização
+    lemma = WordNetLemmatizer()
+    lemmatizado = [lemma.lemmatize(palavra) for palavra in stemizador]
+
     # Combine todas as transformações em um único texto tratado
-    texto_tratado = ' '.join(stemizador)
+    texto_tratado = ' '.join(lemmatizado)
 
     return texto_tratado
 
