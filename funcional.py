@@ -7,12 +7,12 @@ def preprocess_text(text):
     tokenizada = nltk.word_tokenize(text)
 
     # Remove palavras comuns
-    letras_brasileira = stopwords.words('portuguese')
-    letras_base = [palavra for palavra in tokenizada if palavra.lower() not in letras_brasileira]
+    palavras_brasileira = stopwords.words('portuguese')
+    palavras_relevantes = [palavra for palavra in tokenizada if palavra.lower() not in palavras_brasileira]
 
     # Stemming
     stemmer = RSLPStemmer()
-    stemizador = [stemmer.stem(palavra) for palavra in letras_base]
+    stemizador = [stemmer.stem(palavra) for palavra in palavras_relevantes]
 
     # Combine todas as transformações em um único texto tratado
     texto_tratado = ' '.join(stemizador)
