@@ -39,6 +39,7 @@ class AnalisadorDiario:
 
     def traduzir_texto(self):
 
+        # traduz o texto
         tradutor = Translator(self.texto)
         traducao = tradutor.translate(self, src='auto', dest='en')
         return traducao
